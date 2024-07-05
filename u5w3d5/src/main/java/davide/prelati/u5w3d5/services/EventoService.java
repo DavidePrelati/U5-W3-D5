@@ -3,10 +3,12 @@ package davide.prelati.u5w3d5.services;
 import davide.prelati.u5w3d5.entities.Evento;
 import davide.prelati.u5w3d5.repositories.EventoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class EventoService {
     @Autowired
     private EventoRepository eventoRepository;

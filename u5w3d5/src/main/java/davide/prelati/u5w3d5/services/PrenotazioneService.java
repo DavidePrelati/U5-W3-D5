@@ -1,12 +1,11 @@
 package davide.prelati.u5w3d5.services;
 
 import davide.prelati.u5w3d5.entities.Prenotazione;
-import davide.prelati.u5w3d5.entities.Utente;
 import davide.prelati.u5w3d5.repositories.PrenotazioneRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-import java.util.Optional;
-
+@Service
 public class PrenotazioneService {
     @Autowired
     private PrenotazioneRepository prenotazioneRepository;
@@ -15,11 +14,7 @@ public class PrenotazioneService {
         return prenotazioneRepository.save(prenotazione);
     }
 
-    public Optional<Prenotazione> getPrenotazioniByUser(Utente utente) {
-        return prenotazioneRepository.findAllByUtente(utente);
-    }
-
-    public void deletePrenoazione(Long id) {
+    public void deletePrenotazione(Long id) {
         prenotazioneRepository.deleteById(id);
     }
 }
