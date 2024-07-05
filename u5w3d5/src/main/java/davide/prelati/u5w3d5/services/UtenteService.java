@@ -10,8 +10,8 @@ public class UtenteService {
     @Autowired
     private UtenteRepository utenteRepository;
 
-    public Utente saveUtente(Utente user) {
-        return utenteRepository.save(user);
+    public Utente saveUtente(Utente utente) {
+        return utenteRepository.save(utente);
     }
 
     public Optional<Utente> findByUsername(String username) {
